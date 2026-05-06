@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: catalogue
+  namespace: roboshop
+  labels:
+    app: catalogue
+    tier: app
+    project: roboshop
+    
+spec:
+  replicas: {{ .Values.deployment.replicas }}
+  selector:
+    matchLabels:
+      app: catalogue
+      tier: app
+      project: roboshop
+  template:
+    metadata:
+      labels:
+        app: catalogue
+        tier: app
+        project: roboshop
+    spec:
+      containers:
+      - name: catalogue
+        image: {{ .Values.deployment.imageURL }}:{{ .Values.deployment.imageVersion }}
+        envFrom:
+        - configMapRef:
+            name: catalogue
+        
+
+
+    

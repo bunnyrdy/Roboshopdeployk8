@@ -1,0 +1,3 @@
+deployment:
+  imageURL: 444152781209.dkr.ecr.us-east-1.amazonaws.com/roboshop/rabbitmq
+  imageVersion: 0.0.1

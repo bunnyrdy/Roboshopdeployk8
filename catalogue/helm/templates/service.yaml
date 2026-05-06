@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: catalogue
+  namespace: roboshop
+spec:
+  selector: # labels are used as selectors
+    app: catalogue
+    tier: app
+    project: roboshop
+      
+  ports:
+  - protocol: TCP
+    port: 8080 # service port
+    targetPort: 8080

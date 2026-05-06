@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: payments
+  namespace: roboshop
+spec:
+  selector: # labels are used as selectors
+    app: payments
+    tier: app
+    project: roboshop
+      
+  ports:
+  - protocol: TCP
+    port: 8080 # service port
+    targetPort: 8080

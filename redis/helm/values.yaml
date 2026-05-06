@@ -1,0 +1,3 @@
+deployment:
+  imageURL: ///
+  imageVersion: 0.0.1
