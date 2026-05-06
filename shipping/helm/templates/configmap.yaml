@@ -1,12 +1,15 @@
 apiVersion: v1
 kind: ConfigMap
+
 metadata:
   name: shipping
   namespace: roboshop
+
   labels:
     app: shipping
     project: roboshop
     tier: app
+
 data:
-   CART_ENDPOINT: "cart:8080"
+  CART_ENDPOINT: "cart:8080"
   DB_HOST: "roboshop-dev-mysql.cij0q0ew466u.us-east-1.rds.amazonaws.com"
