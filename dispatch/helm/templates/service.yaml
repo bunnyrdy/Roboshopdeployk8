@@ -1,11 +1,11 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: cart
+  name: dispatch
   namespace: roboshop
 spec:
   selector: # labels are used as selectors
-    app: cart
+    app: dispatch
     tier: app
     project: roboshop
       
